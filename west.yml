@@ -15,28 +15,29 @@ manifest:
   remotes:
     - name: zephyrproject
       url-base: https://github.com/zephyrproject-rtos
+    - name: local
+      url-base: ~/work/zephyr/zephyr-west
 
   # The list of dependencies
   #
   projects:
     # Open source branch uses official Zephyr tree
-    - name: zephyr_public
-      repo-path: zephyr.git
-      path: ecfwwork/zephyr_fork
-      remote: zephyrproject
-      revision: v3.6.0
+    - name: zephyr
+      path: zephyr
+      remote: local
+      revision: v3.6.0-ec
       clone-depth: 1
       west-commands: scripts/west-commands.yml
 
     - name: cmsis
       revision: 4b96cbb174678dcd3ca86e11e1f24bc5f8726da0
-      path: ecfwwork/modules/hal/cmsis
+      path: modules/hal/cmsis
       remote: zephyrproject
 
     - name: hal_microchip
       revision: 5d079f1683a00b801373bbbbf5d181d4e33b30d5
-      path: ecfwwork/modules/hal/microchip
+      path: modules/hal/microchip
       remote: zephyrproject
 
   self:
-    path: ecfwwork
+    path: ecfw
