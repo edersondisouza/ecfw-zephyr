@@ -1,16 +1,20 @@
-target_sources(app
-    PRIVATE
-    ${CMAKE_CURRENT_LIST_DIR}/flashhdr.c
-    ${CMAKE_CURRENT_LIST_DIR}/softstrap.c
-    ${CMAKE_CURRENT_LIST_DIR}/task_handler.c
-    PUBLIC
-    ${CMAKE_CURRENT_LIST_DIR}/flashhdr.h
-    ${CMAKE_CURRENT_LIST_DIR}/softstrap.h
-    ${CMAKE_CURRENT_LIST_DIR}/task_handler.h
-    ${CMAKE_CURRENT_LIST_DIR}/memops.h
-    )
+zephyr_library()
 
-target_include_directories(app
-    PRIVATE
-    ${CMAKE_CURRENT_LIST_DIR}
+zephyr_library_include_directories(../app/boards)
+zephyr_library_include_directories(../app/boards/microchip)
+zephyr_library_include_directories(../app/boards/microchip/mec15xx_mecc)
+zephyr_library_include_directories(../app/boards/microchip/mec17xx_mecc)
+zephyr_library_include_directories(../app/debug)
+zephyr_library_include_directories(../app/kbchost)
+zephyr_library_include_directories(../app/peripheral_management)
+zephyr_library_include_directories(../app/power_sequencing)
+zephyr_library_include_directories(../app/smchost)
+zephyr_library_include_directories(../app/thermal_management)
+
+zephyr_include_directories(.)
+
+zephyr_library_sources(
+    flashhdr.c
+    softstrap.c
+    task_handler.c
     )
