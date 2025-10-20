@@ -1,0 +1,3 @@
+zephyr_library_amend()
+
+zephyr_library_sources_amend_ifdef(CONFIG_PECI_XEC peci_mchp_xec.c)
