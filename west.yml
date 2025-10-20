@@ -25,7 +25,7 @@ manifest:
     - name: zephyr
       path: zephyr
       remote: local
-      revision: v3.6.0-ec
+      revision: v3.6.0-ec-drivers
       clone-depth: 1
       west-commands: scripts/west-commands.yml
 
