@@ -1,0 +1,7 @@
+zephyr_library_amend()
+
+
+zephyr_library_include_directories(${ZEPHYR_BASE}/drivers/espi)
+
+zephyr_library_sources_amend_ifdef(CONFIG_ESPI_XEC_V2 espi_mchp_xec_v2.c)
+zephyr_library_sources_amend_ifdef(CONFIG_ESPI_XEC_V2 espi_mchp_xec_host_v2.c)
