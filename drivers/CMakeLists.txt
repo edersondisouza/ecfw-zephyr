@@ -84,3 +84,4 @@ zephyr_library_sources_ifdef(CONFIG_SOC_SERIES_MEC172X
     )
 
 add_subdirectory_ifdef(CONFIG_ESPI espi)
+add_subdirectory_ifdef(CONFIG_GPIO gpio)
