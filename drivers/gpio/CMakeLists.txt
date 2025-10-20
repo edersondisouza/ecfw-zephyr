@@ -1,0 +1,4 @@
+zephyr_library_amend()
+
+zephyr_library_sources_amend_ifdef(CONFIG_GPIO_XEC_V2 gpio_mchp_xec_v2.c)
+
